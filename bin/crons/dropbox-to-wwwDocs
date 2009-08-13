@@ -1,0 +1,2 @@
+1 * * * * cp -r /home/noa/Dropbox/tietokantasovellus/Sami/sivusto /var/www/sivusto
+1 * * * * cp -r /home/noa/Dropbox/tietokantasovellus/Sami/sivusto /home/noa/Documents/backups/db-projecti-kesa/

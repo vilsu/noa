@@ -1,0 +1,19 @@
+# I want to use Vim's navigation keys
+bind h focus down
+bind t focus up
+
+# to quit all windows at once
+bind \\ quit
+
+# to disable xoff
+bind s
+
+# remove some key bindings
+bind W
+bind ^h
+
+# same as C-a "
+bind 'W' windowlist
+
+bind d prev
+bind n next

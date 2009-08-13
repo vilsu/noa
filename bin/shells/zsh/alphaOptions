@@ -1,0 +1,11 @@
+setopt equals
+setopt numeric_glob_sort    # sort in numeric order rather than lexicographic
+
+setopt monitor              # job control
+setopt long_list_jobs       # list jobs in long format
+
+setopt no_list_rows_first   # sort by colums
+
+setopt list_packed
+
+# ~/bin/shells/Zsh/alphaOptionsRejected

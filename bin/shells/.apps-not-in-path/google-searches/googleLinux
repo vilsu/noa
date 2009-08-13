@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+q=$1
+w=$2
+p=$3
+y=$4
+
+open "http://www.google.com/linux?hl=en&q=$1+$2+$3+$4&btnG=Search"

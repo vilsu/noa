@@ -1,0 +1,4 @@
+"hello
+/usr/bin/mkfifo /tmp/pbcopy.pipe
+while true; do /bin/cat /tmp/pbcopy.pipe | /usr/bin/pbcopy; done
+

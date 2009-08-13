@@ -1,0 +1,2 @@
+# no message about deleting files in a folder
+setopt rmstarsilent

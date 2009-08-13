@@ -1,0 +1,14 @@
+# to get Ctr-S -forward search to work
+stty -ixon
+
+# for combability: to solve the problem with backspace
+# in Vim
+stty erase "^?"
+
+# to have undo
+# bugaa Ubuntu
+#bindkey ^K undo
+
+# to have a backTAB Shift-TAB in Zsh
+# when browing by TAB, for instance in cd 
+bindkey '^[[Z' reverse-menu-complete

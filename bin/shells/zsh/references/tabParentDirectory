@@ -1,0 +1,4 @@
+1. to have tab completion for parent directories
+   eg cd ../ <TAB>
+2. to have TAB for Info -command
+   http://stackoverflow.com/questions/564648/zsh-tab-completion-for-cd

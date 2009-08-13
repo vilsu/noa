@@ -1,0 +1,9 @@
+#TODO
+bind b eval "writebuf" "exec /usr/local/bin/pbcopyScreen.bash -c 'pbcopy < /tmp/screen-exchange'"
+
+# binds C-a b to copy the contents of your last screen copy to the MacOSX pasteboard
+
+#OTHER attempts
+bind b eval "writebuf /tmp/screen-pbcopy" "exec /usr/bin/osascript -e 'tell application \"System Events\"' -e 'set the clipboard to (read posix file \"/tmp/screen-pbcopy\" as text)' -e 'end tell'"
+
+bind b eval "writebuf /tmp/screen-pbcopy" "exec /usr/bin/osascript -e 'tell application \"System Events\"' -e 'set the clipboard to (read posix file \"/tmp/screen-pbcopy\" as text)' -e 'end tell'"

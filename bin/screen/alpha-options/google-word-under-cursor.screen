@@ -1,0 +1,5 @@
+autodetach on
+
+bind ^g  screen -t 'Google' links www.google.com
+bind G screen -t 'Google'    sudo -u insec links www.google.com
+## screen -t GOOGLE      3 links http://www.google.com

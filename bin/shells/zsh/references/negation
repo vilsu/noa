@@ -1,0 +1,5 @@
+to allow the negate pattern, for instance,
+ls -d ^*.c
+Makefile file.pro link morestuff run2 run303 
+bar.o foo main.h pipe run234 stuff 
+file.h foo.o main.o run123 run240 sub

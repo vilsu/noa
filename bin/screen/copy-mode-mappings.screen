@@ -1,0 +1,11 @@
+bindkey -m ^f source /home/noa/bin/screen/edit-file-under-cursor.screen
+
+#bindkey -m ^g source /Users/sam/bin/screen/run-code-under-cursor.screen
+# NB this is same as 
+# bind f source...
+
+# BUG: makes default copying/pasting mad
+#bindkey -m ^m source /Users/sam/bin/screen/man-word.screen
+
+bindkey -m ^[Od stuff {  #"[[}"
+bindkey -m ^[Oc stuff ]  #"}]^f"

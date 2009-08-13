@@ -1,0 +1,27 @@
+# prevent messages from slowing this down
+msgminwait 0
+
+# copy word starting at cursor
+
+# to tell screen that you want to copy s/thing 
+# you may not always be in Screen's copy mode when over a PATH
+# eg you could be using vim and have Vim's cursor over a PATH
+#   if you use always copy-mode, then you do not need this
+copy
+
+stuff " e "
+
+# open a new window that waits for a word to run man on
+# (and uses 'read' to pause on error)
+screen -t man /bin/sh -c 'xargs man || read'
+
+# feed that window the copied word
+paste '.'
+# should display as 'stuff "^M^D"' in vim
+# be sure to enter '^M' as 'CTRL-V ENTER' and '^D' as 'CTRL-V CTRL-D'
+stuff "" 
+
+# turn message waiting back on
+msgminwait 1
+
+# vi: ft=screen

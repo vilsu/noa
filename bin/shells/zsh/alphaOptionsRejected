@@ -1,0 +1,62 @@
+# No cd# {{{
+#   Some commands such as % cd -1 OR cd +1 %
+# seems to available. Thus, it is confusing to use this.
+#   The tab completion gets too heavy if all contents are also
+# within it.
+setopt auto_cd
+# }}}
+
+## Manuals/*{{{*/
+# I use Emacs to read manuals in info
+function info() { emacs -eval "(progn (setq Man-notify-method 'bully) (info \"$1\"))" }
+
+# Bug with Grep
+# I use Emacs to read manuals in man
+ function man() { emacs -eval "(progn (setq Man-notify-method 'bully) (man \"$1\"))" }
+
+#/*}}}*/
+
+# to get run-help work 
+# not necessarily needed
+autoload run-help
+HELPDIR='~/zsh_help'
+
+# Interactive commenting
+# echo sami # this is a comment
+setopt INTERACTIVECOMMENTS
+
+# quoting by backticks
+# You can use now echo same "don''t do that"
+# instead if echo same "don\'t do that"
+setopt RCQUOTES
+
+# I want completion info for kill command 
+ zstyle ':completion:*:*:kill:*' verbose no
+
+
+# to expand command line completion to be /Applications aware
+if [ "`uname`" = "Darwin" ]; then
+   compctl -f -x 'p[2]' -s "`/bin/ls -d1 /Applications/*/*.app 
+/Applications/*.app | sed 's|^.*/\([^/]*\)\.app.*|\\1|;s/ /\\\\ /g'`" 
+-- open
+   alias run='open -a'
+fi
+
+
+# if you do not want notifcations, use
+stty topstop
+
+# Sorting#
+# to enable sorting by 
+# echo run<>
+# run2 run123 run234 run240 run303 
+setopt numericglobsort
+
+# to see notifications
+setopt notify
+
+# globbing
+setopt NUMERIC_GLOB_SORT
+
+
+setopt cdablevars           # avoid the need for an explicit $

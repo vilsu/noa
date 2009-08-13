@@ -1,0 +1,2 @@
+# this does not work in OS X's terminal with 8 colors, since too little colors
+# export LESS_TERMCAP_md=$'\E[01;38;5;74m'    # bold in blue

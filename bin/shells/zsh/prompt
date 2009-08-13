@@ -1,0 +1,11 @@
+# expand functions in the prompt
+setopt prompt_subst
+
+# right Prompt
+RPROMPT=$(echo '%{\033[32m%}%~ %1(j.%j.)')
+
+#use %! to get number of command
+PROMPT='$'
+
+### case-insensitive (all),partial-word and then substring completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'

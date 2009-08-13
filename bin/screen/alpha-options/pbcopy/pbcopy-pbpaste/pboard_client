@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'socket'
+
+socketName = ARGV[0] || "/tmp/pboard"
+exchangeFile = ARGV[1] || "/tmp/screen-exchange"
+
+File.open(exchangeFile) do |file|
+    begin
+        socket = UNIXSocket.open(socketName)
+        while (data = file.read(100))
+            socket.write(data)
+        end
+    rescue
+        socket.close if !socket.nil?
+    end
+end
+

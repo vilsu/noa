@@ -1,0 +1,16 @@
+# Dvorak keybindings
+markkeys h=d:j=h:k=t:l=n
+
+# to change the escape key from ^Aa to 
+# NB ^n to move btw screens
+escape ^Tt
+
+# experimental
+# C-space sets mark. markkeys does it in screen 4.0 and higher, but 3.9x
+# needs the bindkey command. (note the ^@ escape sequence for C-space.)
+markkeys ' '=^@
+# bindkey -m ^@ stuff ' '
+
+# control arrows move by words. (set B, e, and w to F keys so that i can
+# use them to move by words, but they themselves still quit copy mode.)
+markkeys B=[:E=]:b={:e=}:w=>

@@ -1,0 +1,45 @@
+; ~/bin/editors/emacs/alphaOptionsRejected
+; ~/bin/editors/emacs/alphaOptionsTODO
+
+;; Folds// {{{*/
+
+; to enable folding mode
+;(load "folding" 'nomessage 'noerror)
+;(folding-mode-add-find-file-hook)
+
+;; }}}
+
+;(defun jao-toggle-selective-display (column)// {{{*/
+;  (interactive "P")
+;  (set-selective-display
+;   (if selective-display nil (or column 1))))
+;
+;(defun jao-toggle-selective-display (column)
+;    (interactive "P")
+;    (set-selective-display
+;(or column ; disable toggle if column was supplied
+;(unless selective-display 1)))
+;// }}}*/
+;
+ ;;{{{ LaTeX mode stuff
+ (add-hook 'TeX-mode-hook
+                   '(lambda ()
+                          (LaTeX-math-mode)
+                          (turn-on-reftex)))
+ ;;// }}}*/
+
+
+;; keyboard/*{{{*/
+; NOT working
+; I want to have backTAB
+; t
+
+;; Locac backTAB
+;;(local-set-key [backtab] 'hippie-expand)
+
+;; to maintain compability with X and Emacs
+;; I want to have backTab also in Emacs
+
+;;(define-key function-key-map [S-tab] [backtab])
+
+/*}}}*/

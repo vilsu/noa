@@ -1,0 +1,2 @@
+autopushd makes cd acts like pushd
+pushsilent keeps shell from printing the directory stack

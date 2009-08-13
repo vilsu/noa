@@ -1,0 +1,2 @@
+; not working
+; (setq width (max width (+ (length str) 1)))   ;line numbers

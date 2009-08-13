@@ -1,0 +1,38 @@
+autoload -U colors
+colors
+setopt prompt_subst
+ 
+parse_git_branch() {
+  local state remote
+ 
+  git rev-parse --git-dir &> /dev/null
+  git_status="$(git status 2> /dev/null)"
+  branch_pattern="# On branch ([[:alnum:]/]*)"
+  remote_pattern="# Your branch is (.*) of"
+  diverge_pattern="# Your branch and (.*) have diverged"
+  if [[ ! ${git_status} =~ "working directory clean" ]]; then
+state="%{$fg[red]%}⚡"
+  fi
+  # add an else if or two here if you want to get more specific
+  if [[ ${git_status} =~ ${remote_pattern} ]]; then
+if [[ ${match[1]} == "ahead" ]]; then
+remote="%{$fg[yellow]%}↑"
+    else
+remote="%{$fg[yellow]%}↓"
+    fi
+fi
+ 
+if [[ ${git_status} =~ ${diverge_pattern} ]]; then
+remote="%{$fg[yellow]%}↕"
+  fi
+ 
+if [[ ${git_status} =~ ${branch_pattern} ]]; then
+branch=${match[1]}
+    echo " (${branch})${remote}${state}"
+  fi
+}
+ 
+PROMPT='${TITLEBAR}%{$fg[blue]%}[%{$fg[red]%}%~%{$fg[green]%}$(parse_git_branch)%{$fg[blue]%}] %(?.%{$reset_color%}.%{$fg[red]%})➔%{$reset_color%} '
+
+#source
+# http://gist.github.com/112494

@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+# This is a simple pboard server which binds to a UNIX socket and
+# pipes any input to pbcopy. This server does not provide support
+# for reading from the pbpaste buffer.
+
+require 'socket'
+
+socketName = ARGV[0] || "/tmp/pboard"
+
+File.unlink(socketName) if File.exists?(socketName)
+
+serverSocket = UNIXServer.open(socketName)
+while (socket = serverSocket.accept)
+    pbcopy = IO.popen("pbcopy", "w")
+    while (data = socket.read(100))
+        pbcopy.write(data)
+    end
+    pbcopy.close
+    socket.close
+end
+

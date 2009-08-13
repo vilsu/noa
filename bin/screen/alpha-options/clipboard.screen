@@ -1,0 +1,12 @@
+# clipboard
+# Experimental
+# set the second mark, write to the screen-exchange
+# file, and use xsel to synchronize the paste buffer
+# with the X selection.
+#bindkey -m > eval "stuff ' '" writebuf "exec sh -c 'xsel -n < /tmp/screen-exchange'"
+bindkey -m > eval "stuff ' '" writebuf "exec sh -c 'xsel < /tmp/screen-exchange'"
+
+# not working
+# bug: xsel is not found altough installed
+# zsh: command not found: nhutouh
+# $tu>tthhtttttttthhsh: xsel: command not found  

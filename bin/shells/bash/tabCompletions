@@ -1,0 +1,5 @@
+### MacPorts Softwares 
+. /opt/local/etc/bash_completion
+
+source ~/bin/shells/tab_completions/git-completion.bash
+source ~/bin/shells/tab_completions/django_bash_completion

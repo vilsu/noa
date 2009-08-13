@@ -1,0 +1,9 @@
+### to get split open when I start terminal#
+screen -t vim vim
+split
+
+### to put cursor to the bottom split at startup
+### without the command, Vim does not start as expected
+focus down
+
+screen -t home

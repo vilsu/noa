@@ -1,0 +1,5 @@
+Now we can pipe to multiple outputs: built-in Tee
+TEE: 
+ls -1 | tee file.txt | less
+without TEE: 
+ls -1 > file.txt | less

@@ -1,0 +1,2 @@
+#export PYTHONPATH=/Users/sami/Documents/test/djangobook/
+#export DJANGO_SETTINGS_MODULE=ch3.settings

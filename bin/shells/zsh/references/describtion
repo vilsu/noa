@@ -1,0 +1,19 @@
+1. to have colors for commands
+   such as Grep and ls
+2. to have keyboard shortcuts enabled such as
+   CTRL-S
+3. to have no typoAutoCorrection for my typos, since it is not
+   100% accurate
+4. If I close my shell, I want to close background processes
+   automatically.
+5. If I close my shell and all windows are open, I want to have them
+   open the next time too in my shell. Therefore, I use Screen.
+
+
+This file does NOT contain
+1. coding settigs
+2. Tab completions
+3. small shell apps
+4. fixes for specific OS
+
+

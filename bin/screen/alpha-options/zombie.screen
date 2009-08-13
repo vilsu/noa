@@ -1,0 +1,3 @@
+# if you run the manual at a shell that is not supported by term, then
+# the error message is hidden and the manual is not closed
+zombie kr

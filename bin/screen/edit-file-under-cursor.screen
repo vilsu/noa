@@ -1,0 +1,17 @@
+# prevent messages from slowing this down
+msgminwait 0
+
+# copy path starting at cursor
+stuff "Bw Ebe " # include also non-whitespace junk before your cursor
+
+# write the path to a file
+writebuf /tmp/screen-copied-path
+# open that file in vim in a new screen window
+screen -t vim /bin/sh -c 'vim `cat /tmp/screen-copied-path`'
+
+# turn message waiting back on
+msgminwait 1
+
+# ~/bin/Screen/dev/vim-open.screen
+
+# source: http://gist.github.com/139318

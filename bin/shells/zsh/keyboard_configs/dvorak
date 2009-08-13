@@ -1,0 +1,3 @@
+# set  Dvorak for examining Typos for the CORRECT and CORRECT_ALL options and
+# the spell-word editor command. 
+setopt DVORAK
